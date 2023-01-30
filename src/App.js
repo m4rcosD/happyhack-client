@@ -50,7 +50,7 @@ function App() {
     };
     getDataEvent();
     getData();
-    handleProfile();
+    //handleProfile();
   }, []);
 
   const fetchUsers = () => {
