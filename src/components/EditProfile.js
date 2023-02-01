@@ -198,16 +198,16 @@ function EditProfile(props) {
                         m: 1.5,
                       }}
                     >
-                      {selected.map((value) => (
-                        <Chip key={value} label={value} />
+                      {selected.map((value, i) => (
+                        <Chip key={value + i} label={value} />
                       ))}
                     </Box>
                   )}
                   MenuProps={MenuProps}
                 >
-                  {skills.map((skills) => (
+                  {skills.map((skills, i) => (
                     <MenuItem
-                      key={skills}
+                      key={skills + i}
                       value={skills}
                       style={getStyles(skills, personName, theme)}
                     >

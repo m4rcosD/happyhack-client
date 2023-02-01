@@ -35,9 +35,9 @@ function Profile(props) {
 
   return (
     <div>
-      <div class="centered">
-        <div class="card-container-profile">
-          <span class="pro" id="profile-btn">
+      <div className="centered">
+        <div className="card-container-profile">
+          <span className="pro" id="profile-btn">
             <Link
               style={{ textDecoration: "none", color: "#2e2c2c" }}
               to={`/EditProfile/${user._id}`}
@@ -47,12 +47,12 @@ function Profile(props) {
             </Link>
           </span>
 
-          <img class="dimProfile" src={user.image} alt="user" />
+          <img className="dimProfile" src={user.image} alt="user" />
 
           <h4>
             {user.name} {user.lastName}{" "}
           </h4>
-          <h3 class="smallEmail">{user.email} </h3>
+          <h3 className="smallEmail">{user.email} </h3>
           <h6>
             {user.location} <br />{" "}
           </h6>
@@ -61,7 +61,7 @@ function Profile(props) {
           </h6>
 
 
-          <div class="skills-profile">
+          <div className="skills-profile">
             <h6>Skills</h6>
             <ul>
               {user.skills.map((elem) => {

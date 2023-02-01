@@ -240,7 +240,7 @@ export default function JobCard(props) {
                                       Skills
                                     </InputLabel>{" "}
                                     <Select
-                                      class="form-select"
+                                      className="form-select"
                                       labelId="demo-multiple-name-label"
                                       id="demo-multiple-name"
                                       multiple
@@ -250,9 +250,9 @@ export default function JobCard(props) {
                                       input={<OutlinedInput label="Name" />}
                                       MenuProps={MenuProps}
                                     >
-                                      {skills.map((skill) => (
+                                      {skills.map((skill, i) => (
                                         <MenuItem
-                                          key={skill}
+                                          key={skill + i}
                                           value={skill}
                                           style={getStyles(
                                             skill,

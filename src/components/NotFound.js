@@ -27,7 +27,7 @@ function NotFound() {
 
       <div className="centered404">
      <LottieControl className="lottie404" animation={someJsonThree}/> 
-      <button class="page404Styling" id="profile-btn">
+      <button className="page404Styling" id="profile-btn">
           <Link style={{textDecoration: "none", color: "#2e2c2c"}} to="/"> Back to home</Link>
       </button> 
       </div>

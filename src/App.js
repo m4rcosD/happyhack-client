@@ -40,9 +40,14 @@ function App() {
   useEffect(() => {
     fetchUsers();
     const getData = async () => {
-      let response = await axios.get(`${API_URL}/jobs`);
-      setJobs(response.data);
-      setFetchingJobs(false);
+      try{
+        let response = await axios.get(`${API_URL}/jobs`);
+        setJobs(response.data);
+        setFetchingJobs(false);
+        console.log("works")
+      }catch(err){
+        console.log(err)
+      }
     };
     const getDataEvent = async () => {
       let response = await axios.get(`${API_URL}/events`);
@@ -50,7 +55,7 @@ function App() {
     };
     getDataEvent();
     getData();
-    //handleProfile();
+    //handleProfile()
   }, []);
 
   const fetchUsers = () => {
@@ -258,10 +263,10 @@ function App() {
     });
     setJobs(filteredEvents);
   };
-
+/*
   if (!events.length || fetchingUser || fetchingJobs) {
     return <h1>LOADING...</h1>;
-  }
+  }*/
   console.log("app", user);
   return (
     <div>

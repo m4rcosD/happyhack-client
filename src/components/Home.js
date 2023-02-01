@@ -39,9 +39,9 @@ function Home() {
     getData();
   }, []);
 
-  if (!someJson || !someJsonTwo || !someJsonThree) {
+/*  if (!someJson || !someJsonTwo || !someJsonThree) {
     return <h1>Loading</h1>;
-  }
+  }*/
 
   return (
     <div className="paddingHomepage">
@@ -62,7 +62,7 @@ function Home() {
             </h5>
           </div>
           <div className="lottieGreenWrapper">
-            <span classname="lottieGreen">
+            <span className="lottieGreen">
               <LottieControl animation={someJson} />{" "}
             </span>
           </div>

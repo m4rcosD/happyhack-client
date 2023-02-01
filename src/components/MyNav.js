@@ -119,10 +119,10 @@ const MyNav = (props) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, i) => (
                 <MenuItem
                   className="text"
-                  key={page}
+                  key={page + i}
                   onClick={handleCloseNavMenu}
                 >
                   <Typography textAlign="center">{page}</Typography>
@@ -146,9 +146,9 @@ const MyNav = (props) => {
             {!props.user ? (
               <div></div>
             ) : (
-              pages.map((page) => (
+              pages.map((page, i) => (
                 <Button
-                  key={page}
+                  key={page + i}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
@@ -194,8 +194,8 @@ const MyNav = (props) => {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseNavMenu}>
+                  {settings.map((setting, i) => (
+                    <MenuItem key={setting + i} onClick={handleCloseNavMenu}>
                       <Typography textAlign="center">{setting}</Typography>
                     </MenuItem>
                   ))}
